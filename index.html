@@ -10,16 +10,21 @@
   </head>
   <body>
     <div id="container">
+      <img src="./assets/images/hachan.png" alt="강아지" class="puppy" />
       <h1 class="title">랜덤 토익 단어 생성기</h1>
 
       <p class="question"></p>
       <form>
-        <input type="text" class="answer" />
+        <input type="text" class="answer" placeholder="정답 입력" />
         <button class="submit-btn">제출</button>
       </form>
 
-      <button class="gen-btn">단어 생성</button>
-      <ul class="answer-ul"></ul>
+      <!-- <button class="gen-btn">단어 생성</button> -->
+      <div class="answer-box"><ul class="answer-ul"></ul></div>
+      <button class="hint-btn">힌트 보기</button>
+      <div class="hint-box hidden">
+        <ul class="hint-ul"></ul>
+      </div>
     </div>
   </body>
   <script type="module" src="./js/index.js"></script>

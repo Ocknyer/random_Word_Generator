@@ -36,6 +36,7 @@ submitBtn.addEventListener('click', (e) => {
     const list = document.createElement('li');
     list.innerHTML = `<li class="answe-li">${currentWord.word + '    ' + currentWord.mean[0]}</li>`;
     answerUl.append(list);
+    answer.value = null;
     genWord();
   } else if (!answer.value) {
     alert('답을 입력하세요');

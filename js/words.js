@@ -57,33 +57,33 @@ const arrWords = [
   {
     id: 12,
     word: 'reach',
-    mean: [' 도달하다', '이르다'],
+    mean: ['도달하다', '이르다'],
   },
 
   {
     id: 13,
     word: 'result in/from',
-    mean: [' ~을 야기하다', '~이 원인이다'],
+    mean: ['~을 야기하다', '~이 원인이다'],
   },
   {
     id: 14,
     word: 'specialize in',
-    mean: [' ~을 전문으로 하다'],
+    mean: ['~을 전문으로 하다'],
   },
   {
     id: 15,
     word: 'interact with',
-    mean: [' 교류하다'],
+    mean: ['교류하다'],
   },
   {
     id: 16,
     word: 'proceed with',
-    mean: [' ~을 진행하다'],
+    mean: ['~을 진행하다'],
   },
   {
     id: 17,
     word: 'merge with',
-    mean: [' ~와 합병하다'],
+    mean: ['~와 합병하다'],
   },
   {
     id: 18,
@@ -98,7 +98,7 @@ const arrWords = [
   {
     id: 20,
     word: 'revert to',
-    mean: [' ~로 돌아가다'],
+    mean: ['~로 돌아가다'],
   },
   {
     id: 21,

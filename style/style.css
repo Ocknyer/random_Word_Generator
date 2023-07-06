@@ -24,10 +24,18 @@ body {
   margin-bottom: 20px;
 }
 
-.title {
+.title,
+.title-h2 {
   font-family: 'Cafe24Ssurround';
-  font-size: 28px;
+}
+
+.title {
+  font-size: 32px;
   margin-bottom: 20px;
+}
+
+.title-h2 {
+  font-size: 24px;
 }
 
 .words {
@@ -35,7 +43,16 @@ body {
   height: 100%;
 }
 
-.question,
+.question-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 30px;
+  border: 1px solid #c4c4c4;
+  margin-bottom: 20px;
+}
+
 .answer,
 .gen-btn,
 .submit-btn,
@@ -45,13 +62,16 @@ body {
   border: 1px solid #c4c4c4;
 }
 
+.question-header,
 .question {
   font-size: 20px;
-  font-weight: 500;
-  width: 300px;
-  height: 30px;
+  font-weight: 700;
   line-height: 30px;
   text-align: center;
+}
+
+.question-header {
+  font-size: 18px;
 }
 
 .answer {
@@ -69,7 +89,6 @@ body {
   height: 30px;
 }
 
-.question,
 .answer {
   margin-bottom: 20px;
 }
@@ -98,6 +117,8 @@ body {
   max-height: 600px;
   min-height: 50px;
   border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  padding: 20px;
 }
 
 .hidden {

@@ -2,4 +2,5 @@
 
 ### url
 
-- https://ocknyer.github.io/rendom_Word_Generator/
+- https://ocknyer.github.io/random_Word_Generator/
+- https://eloquent-piroshki-a91b5a.netlify.app/

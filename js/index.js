@@ -64,7 +64,7 @@ submitBtn.addEventListener('click', (e) => {
 //   console.log(randomNum);
 // });
 
-console.log(currentWord);
+console.log('딴짓하지 말고 열심히 하자');
 
 hintBtn.addEventListener('click', () => {
   console.log('hi');

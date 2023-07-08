@@ -12,7 +12,7 @@ const QuestionSection = () => {
   // }, []);
 
   return (
-    <div className='collapse-title text-xl font-medium bg-base-300 text-center'>
+    <div className='collapse-title text-xl font-medium bg-base-300 text-center rounded-sm'>
       <p className='question-header'>문제 :&nbsp; {currentWord.word}</p>
     </div>
   );

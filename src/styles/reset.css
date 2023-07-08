@@ -141,14 +141,6 @@ table {
   border-spacing: 0;
 }
 
-body {
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Noto Sans KR', sans-serif;
-}
-
 * {
   box-sizing: border-box;
   font-family: 'Noto Sans KR', sans-serif;

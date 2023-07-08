@@ -1,19 +1,12 @@
 import React from 'react';
-import arrWords from '../data/words.js';
 
-const QuestionSection = () => {
-  const randomNum = ~~(Math.random() * arrWords.length);
-  const currentWord = arrWords[randomNum];
-  console.log(currentWord, 'ddfdfa');
-
-  // React.useEffect(() => {
-  //   setWord(arrWords[randomNum]);
-  //   console.log(word);
-  // }, []);
-
+const QuestionSection = ({ question }) => {
   return (
-    <div className='collapse-title text-xl font-medium bg-base-300 text-center rounded-sm'>
-      <p className='question-header'>문제 :&nbsp; {currentWord.word}</p>
+    <div className='flex items-center justify-center collapse-title text-xl font-medium bg-base-100 text-center rounded-md w-80 h-12 p-4 mb-5'>
+      <p className='mr-3'>문제 :&nbsp; {question.word}</p>
+      <div className='tooltip' data-tip={question.mean}>
+        <button className='btn-sm bg-secondary rounded-md'>힌트</button>
+      </div>
     </div>
   );
 };

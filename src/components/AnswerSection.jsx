@@ -1,8 +1,6 @@
 import React from 'react';
 
 const AnswerSection = ({ question, rightAnswer, wrongAnswer, handleAnswer, handleSubmit }) => {
-  console.log(rightAnswer);
-
   return (
     <>
       <form className='flex gap-2 mb-10'>
@@ -17,7 +15,6 @@ const AnswerSection = ({ question, rightAnswer, wrongAnswer, handleAnswer, handl
         </button>
       </form>
 
-      {/* <h2 className='mb-2 text-xl'>정답공간</h2> */}
       <div className='overflow-x-auto w-full rounded-md'>
         <table className='table table-lg'>
           <thead>
@@ -33,7 +30,7 @@ const AnswerSection = ({ question, rightAnswer, wrongAnswer, handleAnswer, handl
             <tbody className='bg-base-100'>
               {rightAnswer.map((answer, index) => {
                 return (
-                  <tr>
+                  <tr key={index}>
                     <th>{index + 1}</th>
                     <td>{answer.word}</td>
                     <td>{answer.mean[0]}</td>

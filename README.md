@@ -2,8 +2,7 @@
 
 ### url
 
-- https://ocknyer.github.io/random_Word_Generator/
-- https://eloquent-piroshki-a91b5a.netlify.app/
+- https://effulgent-beignet-ce734c.netlify.app
 
 ### version log
 

@@ -76,7 +76,7 @@ const Home = () => {
   const [selectType, setSelectType] = useState(rcData);
 
   const [selectName, setSelectName] = useState(rcData[0]);
-  const [stampList, setStampList] = useState([]);
+  const [stampList, setStampList] = useState(['day1']);
 
   useEffect(() => {
     if (type === 'RC') {

@@ -1,10 +1,15 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
+import StampList from './components/StampList';
 
 const App = () => {
   return (
-    <div data-theme='dark'>
-      <Home />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/stamp' element={<StampList />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

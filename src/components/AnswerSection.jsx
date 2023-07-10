@@ -15,14 +15,13 @@ const AnswerSection = ({ question, rightAnswer, wrongAnswer, handleAnswer, handl
         </button>
       </form>
 
-      <div className='overflow-x-auto w-full rounded-md'>
+      <div className='overflow-auto w-full rounded-md'>
         <table className='table table-lg'>
           <thead>
             <tr className='bg-base-100'>
               <th></th>
               <th>단어</th>
               <th>뜻</th>
-              <th>예문</th>
             </tr>
           </thead>
 
@@ -34,7 +33,6 @@ const AnswerSection = ({ question, rightAnswer, wrongAnswer, handleAnswer, handl
                     <th>{index + 1}</th>
                     <td>{answer.word}</td>
                     <td>{answer.mean[0]}</td>
-                    <td>Blue</td>
                   </tr>
                 );
               })}

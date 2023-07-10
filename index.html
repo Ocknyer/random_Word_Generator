@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/reset.css" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>랜덤 토익 단어 생성기</title>
+  </head>
+  <body>
+    <div id="container">
+      <img src="./assets/images/hachan.png" alt="강아지" class="puppy" />
+      <h1 class="title">랜덤 토익 단어 생성기</h1>
+
+      <div class="question-box">
+        <p class="question-header">문제 :&nbsp;</p>
+        <p class="question"></p>
+      </div>
+
+      <form>
+        <input type="text" class="answer" placeholder="정답 입력" />
+        <button class="submit-btn">제출</button>
+      </form>
+      <div class="answer-box">
+        <h2 class="title-h2">정답공간</h2>
+        <ul class="answer-ul"></ul>
+      </div>
+
+      <button class="hint-btn">힌트 보기</button>
+      <div class="hint-box hidden">
+        <h2 class="title-h2">힌트공간</h2>
+        <ul class="hint-ul"></ul>
+      </div>
+    </div>
+  </body>
+  <script type="module" src="./js/index.js"></script>
+</html>

@@ -2,68 +2,72 @@ import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import QuestionSection from '../components/QuestionSection';
 import AnswerSection from '../components/AnswerSection';
+import lcDay5 from '../data/LC/lcDay5.js';
+import lcDay6 from '../data/LC/lcDay6.js';
+import lcDay7 from '../data/LC/lcDay7.js';
+import lcDay8 from '../data/LC/lcDay8.js';
+import lcDay9 from '../data/LC/lcDay9.js';
+
 import rc2 from '../data/RC/rc2';
-import StampList from '../components/StampList';
-// import lcDay5 from '../data/LC/lcDay5.js';
-// import lcDay6 from '../data/LC/lcDay6.js';
-// import lcDay7 from '../data/LC/lcDay7.js';
+import rc3 from '../data/RC/rc3';
+import rc4 from '../data/RC/rc4';
 
-const lcData = ['5일차', '6일차', '7일차'];
-const rcData = ['기출 2번', '기출 3번'];
+const lcData = ['5일차', '6일차', '7일차', '8일차', '9일차'];
+const rcData = ['기출 2번', '기출 3번', '기출 4번'];
 
-const lcDay5 = [
-  {
-    id: 1,
-    word: 'retire',
-    mean: ['사임하다'],
-  },
-  {
-    id: 2,
-    word: 'resignation',
-    mean: ['사직', '사임'],
-  },
-  {
-    id: 3,
-    word: 'trainee',
-    mean: ['교육받는 사람'],
-  },
-];
+// const lcDay5 = [
+//   {
+//     id: 1,
+//     word: 'retire',
+//     mean: ['사임하다'],
+//   },
+//   {
+//     id: 2,
+//     word: 'resignation',
+//     mean: ['사직', '사임'],
+//   },
+//   {
+//     id: 3,
+//     word: 'trainee',
+//     mean: ['교육받는 사람'],
+//   },
+// ];
 
-const lcDay6 = [
-  {
-    id: 1,
-    word: 'estimate = quote',
-    mean: ['견적', '견적서', '견적을 내다', '추정하다'],
-  },
-  {
-    id: 2,
-    word: 'approval',
-    mean: ['승인', '찬성'],
-  },
-  {
-    id: 3,
-    word: 'approve',
-    mean: ['~을 승인하다', '~를 승인하다'],
-  },
-];
+// const lcDay6 = [
+//   {
+//     id: 1,
+//     word: 'estimate = quote',
+//     mean: ['견적', '견적서', '견적을 내다', '추정하다'],
+//   },
+//   {
+//     id: 2,
+//     word: 'approval',
+//     mean: ['승인', '찬성'],
+//   },
+//   {
+//     id: 3,
+//     word: 'approve',
+//     mean: ['~을 승인하다', '~를 승인하다'],
+//   },
+// ];
 
-const lcDay7 = [
-  {
-    id: 1,
-    word: 'job opening (= job vacancy)',
-    mean: ['빈자리', '(직장의)빈자리', '공석'],
-  },
-  {
-    id: 2,
-    word: 'recruit',
-    mean: ['신입사원', '모집하다'],
-  },
-  {
-    id: 3,
-    word: 'recruiting agency',
-    mean: ['취업정보회사'],
-  },
-];
+// const lcDay7 = [
+//   {
+//     id: 1,
+//     word: 'job opening (= job vacancy)',
+//     mean: ['빈자리', '(직장의)빈자리', '공석'],
+//   },
+//   {
+//     id: 2,
+//     word: 'recruit',
+//     mean: ['신입사원', '모집하다'],
+//   },
+//   {
+//     id: 3,
+//     word: 'recruiting agency',
+//     mean: ['취업정보회사'],
+//   },
+// ];
 
 const Home = () => {
   const [selectDay, setSelectDay] = useState(lcDay5);
@@ -119,6 +123,20 @@ const Home = () => {
     setQuestion('');
   };
 
+  const handleSelectRC = (e) => {
+    if (e.target.name === '기출 2번') {
+      setSelectName('기출 2번');
+      setSelectDay(rc2);
+    } else if (e.target.name === '기출 3번') {
+      setSelectName('기출 3번');
+      setSelectDay(rc3);
+    } else if (e.target.name === '기출 4번') {
+      setSelectName('기출 4번');
+      setSelectDay(rc4);
+    }
+    setQuestion('');
+  }
+
   const handleGenQuestion = () => {
     // console.log(selectDay, 'yooo');
     const randomNum = ~~(Math.random() * selectDay.length);
@@ -171,6 +189,7 @@ const Home = () => {
           selectType={selectType}
           question={question}
           handleSelectLC={handleSelectLC}
+          handleSelectRC={handleSelectRC}
           selectDay={selectDay}
           handleType={handleType}
         />

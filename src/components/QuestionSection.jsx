@@ -4,6 +4,7 @@ const QuestionSection = ({
   question,
   selectDay,
   handleSelectLC,
+  handleSelectRC,
   handleType,
   type,
   selectType,
@@ -50,7 +51,7 @@ const QuestionSection = ({
               {selectType.map((select, i) => {
                 return (
                   <li key={i}>
-                    <button name={select} onClick={handleSelectLC}>
+                    <button name={select} onClick={type === 'RC' ? handleSelectRC : handleSelectLC}>
                       {select}
                     </button>
                   </li>

@@ -2,7 +2,7 @@ import React from 'react';
 
 const TestResult = ({ totalLength, isShow, correct, incorrect, handleNoteShow, handleResetTest }) => {
   return (
-    <div className='flex flex-col gap-4 w-full h-full pb-16'>
+    <div className='flex flex-col gap-4 w-full pb-16'>
       <h1 className={'text-3xl text-center'}>
         <span className={[correct.length >= totalLength / 2 ? 'text-blue-500' : 'text-red-500']}>{correct.length}</span>
         /<span>{totalLength}</span>

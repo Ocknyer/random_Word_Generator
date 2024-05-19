@@ -11,7 +11,7 @@ const Words = () => {
   };
 
   return (
-    <div className='flex flex-col gap-4 w-full dark800 pb-16 dark:text-white p-2 items-center'>
+    <div className='flex flex-col gap-4 w-full pb-16 dark:text-white p-2 items-center'>
       <select className='select select-bordered w-full max-w-sm' onChange={handleCurrentWords}>
         {wordsArray.map((words, idx) => (
           <option key={idx} value={JSON.stringify(words.value)}>
@@ -20,7 +20,7 @@ const Words = () => {
         ))}
       </select>
       <section className='flex flex-col w-full border dark:border-zinc-500 rounded-xl overflow-hidden'>
-        <div className='flex h-12 items-center border-b dark:border-zinc-500 font-bold dark800 overflow-hidden  divide-x-[1px]'>
+        <div className='flex h-12 items-center border-b dark:border-zinc-500 font-bold overflow-hidden  divide-x-[1px]'>
           <p className='table-header w-12'>번호</p>
           <p className='table-header w-40 md:w-96'>단어</p>
           <p className='table-header md:w-96'>뜻</p>

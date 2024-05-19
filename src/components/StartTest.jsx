@@ -13,7 +13,7 @@ const StartTest = ({ wordsArray, handleStartTest, handleCurrentWords, onSelect }
           </option>
         ))}
       </select>
-      <button onClick={handleStartTest} className='btn' disabled={!onSelect}>
+      <button onClick={handleStartTest} className='btn btn-info' disabled={!onSelect}>
         시험 시작
       </button>
     </div>

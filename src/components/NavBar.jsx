@@ -4,7 +4,7 @@ import { BookIcon, HomeIcon, QuizIcon } from '../assets/icons';
 
 const NavBar = () => {
   return (
-    <nav className='flex gap-2 w-full h-12 fixed bottom-0 justify-between border-t dark800 dark:border-zinc-500'>
+    <nav className='flex gap-2 w-full h-12 fixed bottom-0 justify-between border-t dark:border-zinc-500 bg-white dark:bg-gray-800'>
       <Link to={'/'} className='flex items-center justify-center w-full'>
         <img src={HomeIcon} alt='홈' className='w-8 h-8 dark:invert' />
       </Link>

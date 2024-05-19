@@ -4,8 +4,10 @@ import TestResult from '../components/TestResult';
 import StartTest from '../components/StartTest';
 import wordsArray from '../data/words';
 import { InfoIcon } from '../assets/icons/index';
+import { useVh } from '../hooks/useVh';
 
 const Test = () => {
+  const vh = useVh();
   const [questionNumber, setQuestionNumber] = React.useState(1);
   const [onTest, setOnTest] = React.useState(false);
   const [isTestEnd, setIsTestEnd] = React.useState(false);
@@ -15,12 +17,11 @@ const Test = () => {
   const [answer, setAnswer] = React.useState('');
   const [correct, setCorrect] = React.useState([]);
   const [incorrect, setIncorrect] = React.useState([]);
+  const [onSelect, setOnSelect] = React.useState(false);
   const [isShow, setIsShow] = React.useState({
     correctShow: false,
     incorrectShow: false,
   });
-
-  const [onSelect, setOnSelect] = React.useState(false);
 
   const handleCurrentWords = (e) => {
     setOnSelect(true);
@@ -60,6 +61,10 @@ const Test = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (answer === '') {
+      alert('정답을 입력하세요.');
+      return;
+    }
     setAnswer('');
 
     if (questionNumber <= initialLists.length) {
@@ -106,7 +111,10 @@ const Test = () => {
   console.log(currentWord, '현재 단어');
 
   return (
-    <div className='w-full h-screen flex flex-col gap-4 items-center dark800 pb-16 dark:text-white p-4'>
+    <div
+      className='w-full flex flex-col gap-4 items-center pb-16 dark:text-white p-4'
+      style={{ height: `${100 * vh}px` }}
+    >
       {!onTest && !isTestEnd ? (
         <StartTest
           wordsArray={wordsArray}
@@ -135,7 +143,7 @@ const Test = () => {
                   <input
                     type='text'
                     placeholder='정답'
-                    className='input input-bordered input-md'
+                    className='input input-bordered input-md text-[16px]'
                     onChange={handleAnswer}
                     value={answer}
                   />

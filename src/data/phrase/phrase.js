@@ -1,4 +1,4 @@
-const rc2 = [
+const phrase = [
   {
     id: 1,
     word: 'process',
@@ -122,4 +122,4 @@ const rc2 = [
   },
 ];
 
-export default rc2;
+export default phrase;

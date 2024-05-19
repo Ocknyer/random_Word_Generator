@@ -12,7 +12,7 @@ const TestResult = ({ totalLength, isShow, correct, incorrect, handleNoteShow, h
         <p className='h-10 flex items-center justify-center border-b dark:border-zinc-500 text-lg font-bold'>정답</p>
         {isShow.correctShow && (
           <>
-            <div className='flex h-12 items-center border-b dark:border-zinc-500 w-full font-bold dark800'>
+            <div className='flex h-12 items-center border-b dark:border-zinc-500 w-full font-bold'>
               <p className='table-header w-36 md:w-96'>단어</p>
               <p className='table-header flex-1'>뜻</p>
               <p className='table-header-last flex-1'>내 답안</p>
@@ -39,7 +39,7 @@ const TestResult = ({ totalLength, isShow, correct, incorrect, handleNoteShow, h
         <p className='h-10 flex items-center justify-center border-b dark:border-zinc-500 text-lg font-bold'>오답</p>
         {isShow.incorrectShow && (
           <>
-            <div className='flex h-12 items-center border-b dark:border-zinc-500 w-full font-bold dark800'>
+            <div className='flex h-12 items-center border-b dark:border-zinc-500 w-full font-bold'>
               <p className='table-header w-36 md:w-96'>단어</p>
               <p className='table-header flex-1'>뜻</p>
               <p className='table-header-last flex-1'>내 답안</p>

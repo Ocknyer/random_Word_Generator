@@ -137,9 +137,6 @@ const Test = () => {
                     <img src={InfoIcon} alt='힌트' className='size-6 dark:invert' />
                   </div>
                 </div>
-                <button onClick={(e) => getSpeech(e, currentWord.word)} className='w-6 h-6'>
-                  <img src={VolumeIcon} alt='발음 듣기' className='w-6 h-6 dark:invert' />
-                </button>
                 <div className='flex gap-2 w-full justify-center'>
                   <input
                     type='text'
@@ -153,6 +150,9 @@ const Test = () => {
                   </button>
                 </div>
               </form>
+              <button onClick={(e) => getSpeech(e, currentWord.word)} className='w-6 h-6'>
+                <img src={VolumeIcon} alt='발음 듣기' className='w-6 h-6 dark:invert' />
+              </button>
             </>
           )}
         </>

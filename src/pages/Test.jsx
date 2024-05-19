@@ -135,7 +135,7 @@ const Test = () => {
                   <input
                     type='text'
                     placeholder='정답'
-                    className='input input-bordered input-md'
+                    className='input input-bordered input-md text-[16px]'
                     onChange={handleAnswer}
                     value={answer}
                   />

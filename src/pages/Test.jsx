@@ -140,11 +140,11 @@ const Test = () => {
                 <button onClick={(e) => getSpeech(e, currentWord.word)} className='w-6 h-6'>
                   <img src={VolumeIcon} alt='발음 듣기' className='w-6 h-6 dark:invert' />
                 </button>
-                <div className='flex gap-2'>
+                <div className='flex gap-2 w-full justify-center'>
                   <input
                     type='text'
                     placeholder='정답'
-                    className='input input-bordered input-md text-[16px]'
+                    className='input input-bordered input-md text-[16px] w-52'
                     onChange={handleAnswer}
                     value={answer}
                   />

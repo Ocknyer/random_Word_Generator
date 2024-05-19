@@ -2,7 +2,7 @@ import React from 'react';
 
 const StartTest = ({ wordsArray, handleStartTest, handleCurrentWords, onSelect }) => {
   return (
-    <div className='w-full flex flex-col gap-4 p-4 items-center justify-center h-full'>
+    <div className='w-full flex flex-col gap-4 p-4 items-center justify-center h-full mt-24'>
       <select className='select select-bordered w-full max-w-sm' onChange={handleCurrentWords}>
         <option disabled selected key={0}>
           단어 선택

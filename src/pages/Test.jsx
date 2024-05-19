@@ -3,8 +3,9 @@ import _ from 'lodash';
 import TestResult from '../components/TestResult';
 import StartTest from '../components/StartTest';
 import wordsArray from '../data/words';
-import { InfoIcon } from '../assets/icons/index';
+import { InfoIcon, VolumeIcon } from '../assets/icons/index';
 import { useVh } from '../hooks/useVh';
+import { getSpeech } from '../utils/utils';
 
 const Test = () => {
   const vh = useVh();
@@ -126,21 +127,21 @@ const Test = () => {
               <button onClick={handleResetTest} className='btn btn-sm absolute top-2 right-2'>
                 탈주
               </button>
-              <form action='' onSubmit={handleSubmit} className='flex flex-col gap-4 mt-24'>
+              <form action='' onSubmit={handleSubmit} className='flex flex-col gap-4 mt-24 w-full items-center'>
                 <p className='text-xl text-center'>
                   {questionNumber}/{initialLists.length}
                 </p>
                 <div className='flex gap-4 items-center justify-center'>
                   <p className='text-xl text-center'>{currentWord.word}</p>
                   <div className='tooltip' data-tip={currentWord.meaning}>
-                    <img src={InfoIcon} alt='힌트' className='size-6' />
+                    <img src={InfoIcon} alt='힌트' className='size-6 dark:invert' />
                   </div>
                 </div>
-                <div className='flex gap-2'>
+                <div className='flex gap-2 w-full justify-center'>
                   <input
                     type='text'
                     placeholder='정답'
-                    className='input input-bordered input-md text-[16px]'
+                    className='input input-bordered input-md text-[16px] w-52'
                     onChange={handleAnswer}
                     value={answer}
                   />
@@ -149,6 +150,9 @@ const Test = () => {
                   </button>
                 </div>
               </form>
+              <button onClick={(e) => getSpeech(e, currentWord.word)} className='w-6 h-6'>
+                <img src={VolumeIcon} alt='발음 듣기' className='w-6 h-6 dark:invert' />
+              </button>
             </>
           )}
         </>

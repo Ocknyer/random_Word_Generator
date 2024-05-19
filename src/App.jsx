@@ -1,15 +1,15 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
-import StampList from './components/StampList';
+import Words from './pages/Words';
+import Test from './pages/Test';
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/stamp' element={<StampList />} />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path='/' element={<Home />} />
+      <Route path='/words' element={<Words />} />
+      <Route path='/test' element={<Test />} />
+    </Routes>
   );
 };
 

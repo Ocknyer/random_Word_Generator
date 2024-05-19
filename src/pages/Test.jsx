@@ -111,10 +111,7 @@ const Test = () => {
   console.log(currentWord, '현재 단어');
 
   return (
-    <div
-      className='w-full flex flex-col gap-4 items-center pb-16 dark:text-white p-4'
-      style={{ height: `${100 * vh}px` }}
-    >
+    <div className='w-full flex flex-col gap-4 items-center dark:text-white p-4'>
       {!onTest && !isTestEnd ? (
         <StartTest
           wordsArray={wordsArray}

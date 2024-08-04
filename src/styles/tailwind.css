@@ -20,6 +20,10 @@
   }
 }
 
+.main-container {
+  @apply max-w-[1024px] mx-auto shadow-md min-h-dvh;
+}
+
 .table-header {
   @apply flex items-center h-full p-2  dark:border-zinc-500;
 }

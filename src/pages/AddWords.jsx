@@ -1,7 +1,7 @@
 import React from 'react';
 import useGetWordList from '../hooks/useGetWordList';
 import { fireStore } from '../firebase/firebase';
-import { addDoc, collection, deleteDoc, doc, setDoc, updateDoc } from 'firebase/firestore';
+import { deleteDoc, doc, setDoc, updateDoc } from 'firebase/firestore';
 import WordList from '../components/WordList';
 import DaySelector from '../components/DaySelector';
 import WordForm from '../components/WordForm';

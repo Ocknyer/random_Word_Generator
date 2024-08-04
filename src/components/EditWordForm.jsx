@@ -42,7 +42,7 @@ const EditWordForm = ({ word, newInputValue, handleNewInput, handleEditWord }) =
       />
       <button
         className='btn'
-        disabled={!newInputValue.word.length || !newInputValue.mean.length}
+        // disabled={!newInputValue.word.length || !newInputValue.mean.length}
         onClick={(e) => handleEditWord(e, word.id)}
       >
         수정

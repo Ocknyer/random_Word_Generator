@@ -2,8 +2,6 @@ import React from 'react';
 import { getSpeech } from '../utils/utils';
 import { CloseIcon, VolumeIcon } from '../assets/icons';
 import EditWordForm from './EditWordForm';
-import WordForm from './WordForm';
-import { mean } from 'lodash';
 
 const WordList = ({
   wordList,
@@ -51,7 +49,7 @@ const WordList = ({
                   </p>
                 )}
                 <dialog id={word.id} className='modal'>
-                  <div className='modal-box flex flex-col gap-1 relative'>
+                  <div className='modal-box flex flex-col gap-1 relative pt-12'>
                     {!onEdit ? (
                       <>
                         <div className='flex items-center gap-2'>
